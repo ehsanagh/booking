@@ -8,13 +8,13 @@ header {
   .icon {
     width: 129px;
     height: 22px;
-    background: url("/assets/logo.svg") center no-repeat;
+    background: url("../assets/logo.svg") center no-repeat;
   }
   .nav-trigger {
     width: 16px;
     height: 10px;
     cursor: pointer;
-    background: url("/assets/burger-icon.svg") center no-repeat;
+    background: url("../assets/burger-icon.svg") center no-repeat;
   }
 }
 
@@ -27,9 +27,9 @@ agm-map {
   position: absolute;
   bottom: 20px;
   left: 0;
-  background-color: rgba(0, 0, 0, .3);
   width: 100%;
   overflow: hidden;
+  z-index: 100;
   .hotels-list {
     display: flex;
     overflow-x: hidden;
