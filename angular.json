@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "limeTest"
+  "defaultProject": "limeTest",
+  "cli": {
+    "analytics": "6caf9e27-a7f1-4d09-aea4-5d0be6663cff"
+  }
 }

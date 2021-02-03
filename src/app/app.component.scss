@@ -1,0 +1,187 @@
+header {
+  background-color: #ebeae6;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  .icon {
+    width: 129px;
+    height: 22px;
+    background: url("/assets/logo.svg") center no-repeat;
+  }
+  .nav-trigger {
+    width: 16px;
+    height: 10px;
+    cursor: pointer;
+    background: url("/assets/burger-icon.svg") center no-repeat;
+  }
+}
+
+agm-map {
+  height: calc(100vh - 54px);
+  max-height: 100%;
+}
+
+.slider {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  width: 100%;
+  overflow: hidden;
+  .hotels-list {
+    display: flex;
+    overflow-x: hidden;
+    .hotel-item {
+      box-sizing: border-box;
+      width: 280px;
+      min-width:280px;
+      height: 230px;
+      flex:1;
+      background-color: white;
+      margin-left: 20px;
+      padding: 20px;
+      .content {
+        display: flex;
+        .image {
+          min-width: 100px;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        .information {
+          padding-left: 15px;
+          position: relative;
+          h3 {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: normal;
+            margin-top: 0;
+          }
+          .distance {
+            font-size: 12px;
+            line-height: 16px;
+            color: #636363;
+            text-transform: uppercase;
+          }
+
+          .price {
+            position: absolute;
+            bottom: 30px;
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .description {
+            position: absolute;
+            bottom: 5px;
+            font-size: 14px;
+            color: #666;
+          }
+        }
+      }
+      .book-button {
+        background-color: #f39431;
+        border: 2px solid #f39431;
+        color: white;
+        display: flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+      // &:last-child {
+      //   margin-right: 20px;
+      // }
+    }
+  }
+}
+
+.form-base {
+  text-align: center;
+  margin-top: 30px;
+  .message {
+    background-color: #d0efd5;
+    border: 1px solid #7ae6b4;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px 10px;
+    margin: 25px 0;
+  }
+  .form-elm {
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    input {
+      margin: 10px 0;
+      flex: 1;
+      border: 2px solid #ccc;
+      border: 2px solid #ccc;
+      height: 42px;
+      border-radius: 5px;
+      padding: 0 10px;
+      &.invalid {
+        border-color: red;
+      }
+    }
+    .input-group {
+      flex: 1;
+      input {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      label { display: flex; font-size: 14px; color: #666;}
+    }
+  }
+  .submit {
+    height: 42px;
+    border: 2px solid #ccc;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #f7f1f1;
+    cursor: pointer;
+    &:hover {
+      background-color: #f39431;
+      border-color: #f39431;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .form-base .form-elm {
+    input, .input-group {
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .form-base {
+    .message { padding: 15px 10px; }
+    .form-elm {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

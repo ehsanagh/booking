@@ -1,0 +1,51 @@
+lime-modal {
+  display: none;
+  .lime-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    .lime-modal-body {
+      padding: 20px;
+      background: #fff;
+      margin: 40px;
+      position: relative;
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .lime-modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+  }
+}
+
+body.lime-modal-open {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  lime-modal {
+    .lime-modal {
+      .lime-modal-body {
+        margin: 40px auto;
+        max-width: 640px;
+      }
+    }
+  }
+}
